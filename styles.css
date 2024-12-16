@@ -2,25 +2,26 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f9;
+    background-color: rgba(240, 240, 240, 0.973);
 } 
 
 header {
     position: sticky;
-    top: 0;
+    top: 20;
     left: 0;
     width: 100%;
-    background-color: #5a498a;
+    background-color: #a16ec4a9;
     color: white; 
-    padding: 10px 0;
+    padding: 5px 0;
     text-align: center;
-    z-index: 500;
+    font-size: 23px;
+    z-index: 100;
 }
 
 header nav a {
-    color: rgb(8, 8, 8);
+    color: rgb(31, 24, 24);
     text-decoration: none;
-    margin: 0 15px;
+    margin: 0 18px;
     font-size: 18px;
 }
 
@@ -58,12 +59,12 @@ img {
 
 .card {
     width: 300px;
-    border: 2px solid #ddd;
+    border: 2px solid #e6dada;
     border-radius: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(212, 201, 201, 0.986);
     overflow: hidden;
     margin: 20px;
-    background-color: #fff;
+    background-color: #f3ecec;
     padding: 12px;
     display: flex;
     flex-direction: column;
@@ -117,4 +118,76 @@ img {
     text-align: justify;
     font-size: 115%;
     margin: 0 25px;
+}
+
+footer {
+    background-color: #38305f94; 
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 15px;
+    }
+
+    header nav a {
+        font-size: 1em;
+        display: block;
+        margin: 5px 0;
+    }
+
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 80%;
+    }
+
+    .cajita a {
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    header nav a {
+        font-size: 0.9em;
+        padding: 8px;
+    }
+
+    .card-container {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 90%;
+    }
+
+    footer {
+        font-size: 0.9em;
+    }
+}
+
+@media (min-width: 1024px) {
+    .card-container {
+        flex-direction: row;
+    }
+
+    .card {
+        width: 25%;
+    }
 }
